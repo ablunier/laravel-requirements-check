@@ -102,6 +102,11 @@ check(function_exists('iconv'), 'The iconv() function is available', 'Install an
 check(function_exists('utf8_decode'), 'The utf8_decode() is available', 'Install and enable the XML extension', false);
 check(function_exists('json_encode'), 'The json_encode() is available', 'Install and enable the JSON extension', false);
 check(function_exists('posix_isatty'), 'The posix_isatty() is available', 'Install and enable the php_posix extension (used to colorized the CLI output)', false);
+check(extension_loaded('openssl'), 'OpenSSL PHP extension loaded', 'Install and enable OpenSSL extension', true);
+check(extension_loaded('mbstring'), 'Mbstring PHP extension loaded', 'Install and enable Mbstring extension', true);
+check(extension_loaded('tokenizer'), 'Tokenizer PHP extension loaded', 'Install and enable Tokenizer extension', true);
+check(extension_loaded('gd'), 'GD PHP extension loaded', 'Install and enable GD extension', true);
+check(extension_loaded('dom'), 'DOM PHP extension loaded', 'Install and enable DOM extension', true);
 
 $accelerator =
   (function_exists('apc_store') && ini_get('apc.enabled'))
