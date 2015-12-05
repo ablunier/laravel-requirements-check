@@ -42,7 +42,7 @@ if (!is_cli()) {
 
 echo "************************************\n";
 echo "*                                  *\n";
-if(isset($_GET['5.0']))
+if(isset($_GET['50']))
   echo "*  Laravel 5.0 requirements check  *\n";
 else
   echo "*  Laravel 5.1 requirements check  *\n";
@@ -76,7 +76,7 @@ echo "\n** Mandatory requirements **\n\n";
 $server = $_SERVER['SERVER_SOFTWARE'];
 $server_is_ok = ( (stripos($server, 'Apache') === 0) || (stripos($server, 'nginx') === 0) );
 check($server_is_ok, sprintf('Web server is suitable (%s)', $server), 'You should change the server to Apache or Nginx', true);
-if(isset($_GET['5.0'])) {
+if(isset($_GET['50'])) {
   check(version_compare(phpversion(), '5.4', '>='), sprintf('PHP version is at least 5.4 (%s)', phpversion()), 'Current version is '.phpversion(), true);
 } else {
   check(version_compare(phpversion(), '5.5.9', '>='), sprintf('PHP version is at least 5.5.9 (%s)', phpversion()), 'Current version is '.phpversion(), true);
