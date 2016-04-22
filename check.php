@@ -106,6 +106,7 @@ check(extension_loaded('openssl'), 'OpenSSL PHP extension loaded', 'Install and 
 check(extension_loaded('mbstring'), 'Mbstring PHP extension loaded', 'Install and enable Mbstring extension', true);
 check(extension_loaded('tokenizer'), 'Tokenizer PHP extension loaded', 'Install and enable Tokenizer extension', true);
 check(extension_loaded('gd'), 'GD PHP extension loaded', 'Install and enable GD extension', true);
+check(extension_loaded('imagick'), 'Imagick PHP extension loaded', 'Install and enable Imagick extension', false);
 check(extension_loaded('dom'), 'DOM PHP extension loaded', 'Install and enable DOM extension', true);
 
 $accelerator =
